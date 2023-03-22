@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+article, aside, section, footer {
+    margin:0px 0px 5px;
+}
+header {
+    background: red;
+}
+nav {
+    background: yellow;
+}
+aside {
+    background: blue;
+    float:right;
+    width: 360px;
+    height: 200px;
+    margin: auto;
+}
+article {
+    background: green;
+    float:left; 
+    width: 1006px;
+    height: 200px;
+    margin: auto;
+}
+section {
+    background: orange;
+    font-size: 10px;
+}
+footer {
+    background: lightblue;
+    clear:both;  
+    font-size: 16px;
+}
+@media screen and (max-width: 968px) {
+    aside {
+        flex-direction: column;
+        width: 100%;
+        text-align: start;
+    }
+    article {
+        width: 100%;
+        height: 90px;
+    }
+}
