@@ -6,10 +6,20 @@ const Container = styled.div`
   height: 100%;
   background: lightgray;
   padding: 10px;
+  position: relative;
   img {
     width: 100%;
     border-radius: 2px;
-    position: relative;
+  }
+  span {
+    position: absolute;
+    left: 10px;
+    bottom: 50px;
+    background: rgba(0,0,0,0.5);
+    padding: 0 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 2rem;
   }
   p {
     overflow: hidden;
@@ -21,6 +31,10 @@ const Container = styled.div`
   @media screen and (max-width: 950px) {
     p {
       display: none;
+    }
+    span {
+      bottom: 20px;
+      font-size: 1.4rem;
     }
   }
   div {
@@ -41,20 +55,16 @@ const ListItem = (props) => {
   console.log("props=", props.imageId)
   const url = `https://picsum.photos/id/${props.imageId}/300/300`
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const price = numbers.map((number) =>
-  <li>{number}</li>
-);
+  const num_price = Number(props.price)
+  const local_price = num_price.toLocaleString()
+
   return (
     <Container>
       <img src={url} alt="" />
+      <span>¥{local_price}</span>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, eius sit eaque doloribus accusamus possimus cumque? Pariatur odio ducimus illum veniam perspiciatis ipsum in quisquam neque. Reiciendis recusandae repellendus aliquam?</p>
-      <div>
-        <span>¥</span>
-        <span>{price}</span>
-      </div>
     </Container>
   )
- }
+}
 
 export default ListItem

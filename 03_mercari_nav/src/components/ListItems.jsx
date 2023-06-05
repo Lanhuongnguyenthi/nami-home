@@ -6,29 +6,26 @@ const ListSection = styled.section`
 	width: 100%;
 	padding: 20px;
 	display: grid;
-	grid-template-columns: repeat(4,01fr);
+	grid-template-columns: repeat(5,1fr);
 	background: red;
 	gap: 10px;
 	@media screen and (max-width: 950px) {
-		ListSection {
-		  display: grid;
-		  grid-template-columns: repeat(3,1fr);
-		} 
+		grid-template-columns: repeat(3,1fr);
 	}
 `
 
 const ListItems = () => {
   return (
 	<ListSection>
-		<ListItem imageId="1">1</ListItem>
-		<ListItem imageId="10">1</ListItem>
-		<ListItem imageId="11">1</ListItem>
-		<ListItem imageId="21">1</ListItem>
-		<ListItem imageId="31">1</ListItem>
-		<ListItem imageId="41">1</ListItem>
-		<ListItem imageId="51">1</ListItem>
-		<ListItem imageId="61">1</ListItem>
-		<ListItem imageId="71">1</ListItem>
+		<ListItem imageId="1" price='5800'>1</ListItem>
+		<ListItem imageId="10" price='5800'>1</ListItem>
+		<ListItem imageId="20" price='5800'>1</ListItem>
+		<ListItem imageId="30" price='5800'>1</ListItem>
+		<ListItem imageId="40" price='5800'>1</ListItem>
+		<ListItem imageId="50" price='5800'>1</ListItem>
+		<ListItem imageId="60" price='5800'>1</ListItem>
+		<ListItem imageId="70" price='5800'>1</ListItem>
+		<ListItem imageId="80" price='5800'>1</ListItem>
 	</ListSection>
   )
 }
